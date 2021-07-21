@@ -9,6 +9,29 @@
     --color-black:#000;
 }
 
+select#bottom.nav-container__link {
+    display:flex;
+text-align: center;
+
+}
+
+/* select #selectDirector.nav-container__link{
+    display:flex;
+    text-align: center;
+} */
+
+#bottom.nav-container__item, #selectDirector.nav-container__item{
+background-color: #049DBF;
+font-size:35px;
+color: var(--color-white);
+font-family: cursive;
+width: 25%;
+}
+ul {
+    display:flex;
+text-align: center;
+}
+
 *{
     margin: 0;
     padding:0;
@@ -25,22 +48,34 @@ body{
     /* font-family: 'lato'; */
     /* background: rgb(30, 95, 216); */
     background-color: #282c34;
+    font-family: cursive;
+
 }
 .main-header{
     background-color:var(--color-header);
     color: var(--color-white);
-    line-height: 12;
+    line-height: 10;
     text-align: center;
 }
 .main-nav{
     background-color: var(--color-nav);
+    font-size: 40px;
 }
+div{
+    display: flex;
+    justify-content:flex-end;
+}
+
 @media screen and (min-width:768px){
     .nav-container{
         display: flex;
     }
     .nav-container__item{
         flex-grow:1;
+    }
+    section.input#buscador{
+        justify-content: flex-end;
+        
     }
 }
 .nav-container__item{
@@ -50,26 +85,57 @@ body{
 }
 .nav-container__item:hover{
     background-color: var(--color-nav-dark);
+    /* background-color: var(--color-nav-white); */
    
 }
 .nav-container__link{
     color: var(--color-white);
     display: block;
     width:100%;
+    justify-content: flex-end;
 }
 .main-container{
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
-@media screen and (min-width:1024px){
+/* 3 colum */
+@media screen and (min-width:1025px){
+    section#peliculas.grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;}
+    }
+
+@media screen and (max-width:1024px){
+    section {
+        align-content: center;  
+    }
+    div{
+        display: flex;
+        justify-content:flex-end;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
     .main-container{
         display: flex;
         flex-direction: row;
+        justify-content: center;
     }
+    .nav-container{
+        color: var(--color-white);
+        display: block;
+        width:100%;
+        justify-content: flex-end;
+        align-content: flex-start;
+        font-size:40px;
+    }
+
+
     .main-container__section{
         /* width: 60%; */
-        flex-basis: 60%;
+        flex-basis: 90%;
     }
     .main-container__aside{
         flex-basis:40%;
