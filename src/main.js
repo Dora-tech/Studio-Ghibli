@@ -12,7 +12,7 @@ edtbuscar.addEventListener("keyup",buscar);
 mostrarDesplegableDirector(data.films);
 function mostrarDesplegableDirector(misdatos)
 {
-    let namesSet=new Set(misdatos.map(item=>item.director));
+    let namesSet = new Set(misdatos.map(item=>item.director));
     let cajadatos=document.getElementById("selectDirector");
     cajadatos.innerHTML="";
     cajadatos.innerHTML=`<option value="" disabled selected>Movies por Director</option>`
@@ -103,7 +103,7 @@ function mostrarpeliculas(misdatos)
 
 const selectPersonajes= document.querySelector(".selectp")
 function filtrarPersonajes(){
-  console.log (selectPersonajes.value);
+  //console.log (selectPersonajes.value);
   data.films.forEach(elemento=>{
     if(selectPersonajes.value=== elemento.title)
         mostrarpersonajes(elemento.people);
@@ -147,7 +147,7 @@ function listaPeli(){
 
 function misort()
 {
-    console.log(data.films.sort(ordenar))
+   // console.log(data.films.sort(ordenar))
     mostrarpeliculas( data.films.sort(ordenar));
 }
 
@@ -165,12 +165,12 @@ function buscar()
 }
 
 //miid
-function mipelicula(miid)
-{
-  console.log(miid);
-  console.log("clic en pelicula")
+// function mipelicula(miid)
+// {
+//   console.log(miid);
+//   console.log("clic en pelicula")
 
-}
+// }
 
 
 
