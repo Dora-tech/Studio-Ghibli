@@ -1,8 +1,13 @@
-
+// trae las datas de studio ghibli
 import data from './data/ghibli/ghibli.js';
+//traemos las funciones del archivo  data ordenar
 import { ordenar } from './data.js';
-document.getElementById("btnlistaPeli").addEventListener("click", listaPeli);
 
+
+document.getElementById("btnlistaPeli").addEventListener("click", listaPeli);
+//Localizamos los elementos del DOM usando los selectores,.getElementById() 
+//Usamos .addEventListener() para adjuntar un controlador de eventos al documento.
+//usa el método addEventListener () para adjuntar un evento 'keyup' a un elemento de entrada. 
 document.getElementById("btnordenar").addEventListener("click",misort);
 let edtbuscar=document.getElementById("buscador");
 edtbuscar.addEventListener("keyup",buscar);
@@ -63,7 +68,7 @@ function listadetodaslasPeli(misdatos)
   
 }
 
-
+//function for y template string para plasmar información de peliculas en el main
 mostrarpeliculas(data.films);
 function mostrarpeliculas(misdatos)
 {
@@ -100,7 +105,7 @@ function mostrarpeliculas(misdatos)
 
 
 //mostrar selecionar personajes1
-
+//función filtrar personajes con for each
 const selectPersonajes= document.querySelector(".selectp")
 function filtrarPersonajes(){
   //console.log (selectPersonajes.value);
@@ -110,7 +115,7 @@ function filtrarPersonajes(){
    } 
   )}
   selectPersonajes.addEventListener("change", filtrarPersonajes)   
-
+//funcion para mostrar personajes en main usando for y template strings
 //mostrarpersonajes(data.films);
 function mostrarpersonajes(misdatos){
   let cajadatos=document.getElementById("peliculas");
@@ -144,13 +149,13 @@ function listaPeli(){
   // console.table(data.films)
   listadetodaslasPeli(data.films)
 }
-
+//function para ordenar
 function misort()
 {
    // console.log(data.films.sort(ordenar))
     mostrarpeliculas( data.films.sort(ordenar));
 }
-
+//funcion para buscar
 function buscar()
 {   // 1. Filter the list of inventors for those who were born in the 1980's
     const predicado = (item) => {
