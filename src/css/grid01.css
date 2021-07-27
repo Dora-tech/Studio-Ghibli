@@ -72,4 +72,9 @@
   .tall {
       grid-row: span 2;
     }
+    div.slide-contenedor{
+        
+      display: grid;
+      grid-template-columns: 1fr;
+  }
   }

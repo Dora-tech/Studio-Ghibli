@@ -105,6 +105,12 @@ div{
     section#peliculas.grid-container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;}
+
+        div.slide-contenedor{
+        
+            display: grid;
+            grid-template-columns: 1fr;
+        }
     }
 
 @media screen and (max-width:1024px){
