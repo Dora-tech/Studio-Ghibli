@@ -1,7 +1,7 @@
 // estas funciones son de ejemplo
 
 
-
+//exportando la funcion ,enviando
 export const ordenar = (a,b)=>{
   const titleA= a.title.toLowerCase();//castillo
   const titleB= b.title.toLowerCase();//album

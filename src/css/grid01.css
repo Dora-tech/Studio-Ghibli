@@ -1,3 +1,4 @@
+/*Usamos grid o grillas para estilizar la estructura de la pagina de acuerdo al boceto*/
 .miarticulo {
   display: flex;
   align-items: center;
